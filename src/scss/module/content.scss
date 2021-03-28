@@ -1,0 +1,140 @@
+.wrapper {
+    display: flex;
+    height: 100%;
+}
+.sidebar {
+    padding: 15px 10px 15px 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        svg {
+            font-size: 20px;
+            color: #2b82d9;
+        }
+
+        span {
+            margin-left: 5px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        padding: 8px 0;
+        margin-left: -5px;
+        min-width: 180px;
+        cursor: pointer;
+        &.active {
+            background: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+        &--btn {
+            margin-top: 20px;
+            color: #7a8192;
+            &:hover {
+                background: rgba(255, 255, 255, 0.4) !important;
+                box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+            }
+        }
+        svg {
+            font-size: 14px;
+            color: #2b82d9;
+        }
+
+        span {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: flex-end;
+        width: 25px;
+        &--plus {
+            svg {
+                color: darkseagreen;
+            }
+        }
+    }
+}
+.tasks {
+    width: 100%;
+    padding: 15px;
+    &__title {
+        color: darkseagreen;
+        font-size: 16px;
+        font-weight: 200;
+        text-align: end;
+        padding-bottom: 2px;
+        margin-bottom: 20px;
+        border-bottom:  2px solid white;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        &--add {
+            justify-content: flex-start;
+            border-radius: 4px;
+            color: #7a8192;
+            &:hover {
+                background: rgba(255, 255, 255, 0.4) !important;
+                box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+            }
+        }
+        &:hover {
+            background-color: #faf19d;
+        }
+        &:hover .tasks__icon--check {
+            border: 1px solid #000000;
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__icon {
+        margin-right: 10px;
+        &--plus {
+            font-size: 12px;
+            color: rgba(0,0,0,9);
+        }
+    }
+    &__icon--check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 15px;
+        height: 15px;
+        border: 1px solid #c0c0c0;
+        border-radius: 2px;
+        transition: 0.3s ease-in-out;
+        svg {
+            font-size: 10px;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    &__text {
+        font-size: 14px;
+        margin-right: 5px;
+        color: black;
+        transition: 0.1s ease-in-out;
+    }
+    &__del {
+        margin-right: 10px;
+    }
+    &__checkbox {
+
+    }
+}

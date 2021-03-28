@@ -14,20 +14,93 @@
         <div class="head">
             <h1 class="head__title">Vanilla Js To-do App</h1>
         </div>
-        <div class="wrap">
+        <div class="wrapper">
             <div class="sidebar">
-                <h2 class="sidebar__title">Все задачи</h2>
+                <h2 class="sidebar__title">
+                    <i class="fas fa-tasks"></i>
+                    <span>Все задачи</span>
+                </h2>
                 <div class="sidebar__items">
-                    <div class="sidebar__item">Дом</div>
-                    <div class="sidebar__item">Работа</div>
-                    <div class="sidebar__item">Звонки</div>
-                    <div class="sidebar__item">Покупки</div>
+                    <div class="sidebar__item active">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span>Дом</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <span>Работа</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <span>Звонки</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span>Еда</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span>Покупки</span>
+                    </div>
+                    <div class="sidebar__item">
+                        <div class="sidebar__icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <span>Финансы</span>
+                    </div>
+                    <div class="sidebar__item sidebar__item--btn">
+                        <div class="sidebar__icon sidebar__icon--plus">
+                            <i class="fas fa-folder-plus"></i>
+                        </div>
+                        <span >Добавить список</span>
+                    </div>
                 </div>
             </div>
             <div class="tasks">
-                <div class="tasks__item"><i class="fas fa-anchor"></i></div>
-                <div class="tasks__item">2</div>
-                <div class="tasks__item">3</div>
+                <h2 class="tasks__title">Все задачи</h2>
+                <div class="tasks__item">
+                    <div class="tasks__wrapper">
+                        <span class="tasks__icon tasks__icon--check"><i class="fas fa-check"></i></span>
+                        <span class="tasks__text">pflfxf задача задача</span>
+                    </div>
+                    <div class="tasks__wrapper">
+                        <span class="tasks__del"><i class="far fa-trash-alt"></i></span>
+                        <span class="tasks__edit"><i class="far fa-edit"></i></span>
+                    </div>
+                </div>
+                <div class="tasks__item">
+                    <div class="tasks__wrapper">
+                        <span class="tasks__icon tasks__icon--check"><i class="fas fa-check"></i></span>
+                        <span class="tasks__text">pflfxf задача задача</span>
+                    </div>
+                    <div class="tasks__wrapper">
+                        <span class="tasks__del"><i class="far fa-trash-alt"></i></span>
+                        <span class="tasks__edit"><i class="far fa-edit"></i></span>
+                    </div>
+                </div>
+                <div class="tasks__item">
+                    <div class="tasks__wrapper">
+                        <span class="tasks__icon tasks__icon--check"><i class="fas fa-check"></i></span>
+                        <span class="tasks__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos esse fuga iusto nobis quis saepe sit, tenetur vitae voluptatem? Atque esse libero nihil nisi officia quas repudiandae sunt voluptatibus.</span>
+                    </div>
+                    <div class="tasks__wrapper">
+                        <span class="tasks__del"><i class="far fa-trash-alt"></i></span>
+                        <span class="tasks__edit"><i class="far fa-edit"></i></span>
+                    </div>
+                </div>
+                <div class="tasks__item tasks__item--add">
+                    <span class="tasks__icon tasks__icon--plus"><i class="fas fa-plus"></i></span>
+                    <span class="tasks__text">Добавить задачу</span>
+                </div>
             </div>
         </div>
     </div>

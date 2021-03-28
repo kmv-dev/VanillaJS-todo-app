@@ -52,6 +52,18 @@ function images() {
         .pipe(dest('dist/assets/'))
 }
 
+function icons() {
+    return src('node_modules/@fortawesome/fontawesome-free/css/all.css')
+        .pipe(dest('src/assets/webfonts'))
+        .pipe(browserSync.stream())
+}
+
+function iconsJs() {
+    return src('node_modules/@fortawesome/fontawesome-free/js/all.js')
+        .pipe(dest('src/assets/webfonts'))
+        .pipe(browserSync.stream())
+}
+
 function scripts() {
     return src('src/js/main.js')
         .pipe(include())
@@ -87,8 +99,10 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.liveReload = liveReload;
 exports.images = images;
+exports.icons = icons;
+exports.iconsJS = iconsJs;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, build, images);
 
 
-exports.default = parallel(html, styles, scripts ,liveReload, watching);
+exports.default = parallel(html, styles, icons, iconsJs, scripts ,liveReload, watching);
